@@ -149,59 +149,15 @@ var Pestilence = (function() {
         self.updateCSS();
     };
 
-    // MousePest.prototype.updateCSS = function() {
-    //     var self = this,
-    //         doc = document,
-    //         style_sheet,
-    //         rules = '';
-
-    //     rules += 'body.lol { cursor: url(' + self.cursor_normal + '), auto !important; }';
-    //     rules += 'body.lol a { cursor: url(' + self.cursor_pointer + '), auto !important; }';
-
-    //     self.element = doc.createElement('style'),
-    //     self.element.type = 'text/css';
-    //     self.element.id = 'mouse_pest';
-
-    //     style_sheet = self.element.styleSheet;
-
-    //     if (style_sheet) {
-    //         style_sheet.cssText = rules;
-    //     }
-    //     else {
-    //         self.element.appendChild(doc.createTextNode(rules));
-    //     }
-
-    //     doc.getElementsByTagName('head')[0].appendChild(self.element);
-    //     addClass(doc.body, 'lol');
-    // };
-
-    // MousePest.prototype.destroy = function() {
-    //     var self = this,
-    //         doc = document,
-    //         element,
-    //         parent;
-
-    //     if (!self.element) {
-    //         return;
-    //     }
-
-    //     removeClass(doc.body, 'lol');
-
-    //     element = doc.getElementById('mouse_pest');
-    //     parent = element.getParentNode();
-
-    //     if (parent) {
-    //         parent.removeNode(element);
-    //     }
-    // };
-
-    // Modified mouse cursor for text area
     MousePest.prototype.updateCSS = function() {
         var self = this,
             doc = document,
             style_sheet,
             rules = '';
-
+        
+        //rules += 'body.lol { cursor: url(' + self.cursor_normal + '), auto !important; }';
+        //rules += 'body.lol a { cursor: url(' + self.cursor_pointer + '), auto !important; }';
+        // Modified mouse cursor for text area
         rules += 'textarea { cursor: url(' + self.cursor_normal + '), auto !important; }';
         rules += 'textarea a { cursor: url(' + self.cursor_pointer + '), auto !important; }';
 
